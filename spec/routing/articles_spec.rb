@@ -20,7 +20,8 @@ RSpec.describe 'routes for articles' do
     )
   end
 
-  skip 'routes PATCH /articles/:id to the articles#update action' do
+  it 'routes PATCH /articles/ to the articles#update action' do
+    expect(patch('/articles/')).to route_to('articles#update')
   end
 
   skip 'routes DELETE /articles/:id to the articles#destroy action' do
